@@ -9,16 +9,29 @@
 </head>
 
 <body>
-  <header class="flex justify-between items-center px-5 shadow h-24">
-    <h1>Logo</h1>
+  <header class="flex relative justify-between items-center px-5 shadow h-24">
+    <h1 class="font-bold text-2xl">Logo</h1>
     <nav>
-      <label class="block bg-green-200 py-2 px-5 rounded" for="menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      <label class="md:hidden block cursor-pointer hover:bg-green-400 bg-green-200 py-2 px-5 rounded transition" for="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
         </svg>
       </label>
-      <input class="hidden" type="checkbox" id="menu">
+
+      <input class="peer hidden" type="checkbox" id="menu">
+
+      <div class="md:static md:top-0 md:shadow-none md:h-max absolute shadow-lg overflow-hidden left-0 w-full top-24 peer-checked:h-max h-0">
+        <ul class="p-5 flex md:flex-row flex-col gap-2">
+          <li class="text-xl hover:bg-green-200 cursor-pointer p-2 rounded transition"><a href="#">Home</a></li>
+          <li class="text-xl hover:bg-green-200 cursor-pointer p-2 rounded transition"><a href="#">Contato</a></li>
+          <li class="text-xl hover:bg-green-200 cursor-pointer p-2 rounded transition"><a href="#">Produtos</a></li>
+        </ul>
+      </div>
+
     </nav>
+
   </header>
 </body>
 
